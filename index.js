@@ -14,11 +14,11 @@ app.set('view engine' , 'hbs');
 
 app.use(express.static(__dirname+'/public'));
 
-app.use((req,res,next)=>{
-	let date = new Date().toString();
-	let log = `${date}:  REQUEST: ${req.url}`
-	console.log(log);
-	res.render('maintenance.hbs');});
+// app.use((req,res,next)=>{
+// 	let date = new Date().toString();
+// 	let log = `${date}:  REQUEST: ${req.url}`
+// 	console.log(log);
+// 	res.render('maintenance.hbs');});
 
 app.get('/' , (req,res)=>{
 	var currentDate = new Date();
