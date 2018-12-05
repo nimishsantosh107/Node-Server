@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -40,6 +41,6 @@ app.get('/bad' , (req,res)=>{
 		error: "404 PAGE AIN'T FOUND"
 	});});
 
-app.listen(3000 , ()=>{
-	console.log("SERVER IS UP ON PORT: 3000");
+app.listen(port , ()=>{
+	console.log(`SERVER IS UP ON PORT: ${port}`);
 });
